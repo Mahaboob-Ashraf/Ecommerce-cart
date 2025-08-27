@@ -1,0 +1,242 @@
+/* === Google Font Import === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* === Global Styles & Resets === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6f8; /* Lighter, cleaner background */
+  color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* === Main Container === */
+.container {
+  width: 100%;
+  max-width: 800px; /* Wider for a more page-like feel */
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+   
+}
+
+h1,
+h2 {
+  font-weight: 600;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* === Cart Wrapper === */
+.cart-wrapper {
+  margin-top: 40px;
+}
+
+/* === Cart Items Styling === */
+#cart-items {
+  margin-bottom: 30px;
+  transition: height 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+#empty-cart {
+  text-align: center;
+  color: #888;
+  padding: 40px 0;
+  font-size: 1.1rem;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.item-info .item-name {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.item-info .item-price {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-btn {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.quantity-btn:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.item-quantity .quantity {
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.2s;
+  margin-left: 60px;
+}
+
+.remove-btn:hover {
+  color: #e53935; /* Red on hover */
+}
+
+/* === Cart Summary Section === */
+#cart-summary {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#checkout-btn {
+  background-color: #28a745; /* Green for go! */
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 15px;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#checkout-btn:hover {
+  background-color: #218838; /* Darker green */
+}
+
+.hidden {
+  display: none;
+}
+
+/* === Basic Product List Styling (Bonus) === */
+#product-list {
+  margin-bottom: 30px;
+}
+
+.product {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+
+.product button {
+  background-color: #007bff; /* A nice blue */
+  border: none;
+  padding: 8px 15px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product button:hover {
+  background-color: #0056b3;
+}
+
+/* === Responsive Design === */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+
+  .cart-item {
+    flex-wrap: wrap; /* Allow items to wrap on small screens */
+    gap: 15px;
+  }
+
+  .item-info {
+    flex-basis: 100%; /* Take full width */
+  }
+
+  .item-quantity {
+    order: 1; /* Move quantity before remove button */
+  }
+
+  .remove-btn {
+    order: 2;
+    margin-left: 2px;
+  }
+
+  .product button {
+    padding: 6px 8px;
+  }
+}
+
+.item-info {
+  flex: 1;
+  margin-right: 15px; /* Adds some space between name and quantity */
+}
+
+.item-quantity {
+  flex-basis: 120px; /* Gives the quantity section a consistent width */
+  justify-content: center;
+}
+
+
+
