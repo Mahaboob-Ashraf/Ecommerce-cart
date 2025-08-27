@@ -24,7 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
     products.forEach(product => {
         const productDiv = document.createElement('div');
         productDiv.innerHTML = `
-        <span>${product.name} - $${product.price.toFixed(2)}</span>
+        <div>
+            <p class="name">${product.name}</p>
+            <p class="p-price">$${product.price.toFixed(2)}</p>
+        </div>
         <button class="add-to-cart-btn" data-id="${product.id}">Add to cart</butto>
         `
         productDiv.classList.add('product')

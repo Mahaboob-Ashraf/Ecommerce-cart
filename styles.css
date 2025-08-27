@@ -84,6 +84,15 @@ h2 {
   gap: 10px;
 }
 
+.name {
+  font-weight: 600;
+}
+
+.p-price {
+  color: #555;
+  font-size: 0.9rem;
+}
+
 .quantity-btn {
   background-color: #f0f0f0;
   border: 1px solid #ddd;
@@ -223,9 +232,35 @@ h2 {
     margin-left: 2px;
   }
 
-  .product button {
+  .add-to-cart-btn {
     padding: 6px 8px;
   }
+}
+
+@media (max-width: 400px) {
+  .item-info .item-name {
+    font-weight: 400px;
+    font-size: 15px;
+    margin-bottom: 2px;
+  }
+
+  .item-quantity .quantity{
+    font-size: 15px;
+    font-weight: 400px;
+    text-align: center;
+  }
+
+  .quantity-btn {
+    width: 25px;
+    height: 25px;
+    font-size: 1rem;
+  }
+
+  .name {
+    
+    font-weight: 400px;
+  }
+
 }
 
 .item-info {
